@@ -4,7 +4,9 @@ type FlexWrapperProps = {
   $direction?: CSSProperties["flexDirection"];
   $align?: CSSProperties["alignItems"];
   $justify?: CSSProperties["justifyContent"];
+  $gap?: CSSProperties["gap"];
   $wrap?: CSSProperties["flexWrap"];
+  $maxWidth?: CSSProperties["width"];
 };
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -12,5 +14,7 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   flex-direction: ${(props) => props.$direction};
   align-items: ${(props) => props.$align};
   justify-content: ${(props) => props.$justify};
+  gap: ${(props) => props.$gap};
   flex-wrap: ${(props) => props.$wrap};
+  max-width: ${(props) => props.$maxWidth};
 `;
