@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Logo } from "../Logo/Logo";
 import { Navigation } from "../Navigation/Navigation";
 import { SocialIcons } from "../SocialIcons/SocialIcons";
-import { Container } from "../Container";
-import { FlexWrapper } from "../FlexWrapper";
+import { Container } from "../styled/Container";
+import { FlexWrapper } from "../styled/FlexWrapper";
 
 export const Header = () => {
   return (

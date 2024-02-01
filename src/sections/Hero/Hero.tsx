@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Container } from "../../components/Container";
-import { FlexWrapper } from "../../components/FlexWrapper";
+import { Container } from "../../components/styled/Container";
+import { FlexWrapper } from "../../components/styled/FlexWrapper";
 import pavanImageJpeg from "../../assets/images/pavan.jpeg";
 import pavanImageWebp from "../../assets/images/pavan.webp";
 
