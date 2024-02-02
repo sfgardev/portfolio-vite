@@ -1,14 +1,34 @@
 import styled from "styled-components";
 
-export const Navigation = () => {
-  const navLinks = ["Home", "About", "Tech Stack", "Projects", "Contact"];
+type NavigationProps = {
+  $color: string;
+  $fontSize: string;
+  $fontWeight: string;
+  $lineHeight: string;
+};
 
+const navLinks = ["Home", "About", "Tech Stack", "Projects", "Contact"];
+
+export const Navigation = ({
+  $color,
+  $fontSize,
+  $fontWeight,
+  $lineHeight,
+}: NavigationProps) => {
   return (
     <StyledNavigation>
       <NavigationList>
         {navLinks.map((link) => (
           <NavigationItem key={link}>
-            <NavigationLink href="#">{link}</NavigationLink>
+            <NavigationLink
+              href="#"
+              $color={$color}
+              $fontSize={$fontSize}
+              $fontWeight={$fontWeight}
+              $lineHeight={$lineHeight}
+            >
+              {link}
+            </NavigationLink>
           </NavigationItem>
         ))}
       </NavigationList>
@@ -25,9 +45,13 @@ const NavigationList = styled.ul`
 
 const NavigationItem = styled.li``;
 
-const NavigationLink = styled.a`
+const NavigationLink = styled.a<NavigationProps>`
   font-family: "DM Sans", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.3;
+  color: ${(props) => props.$color};
+  /* font-size: 1.25rem; */
+  font-size: ${(props) => props.$fontSize};
+  /* font-weight: 500; */
+  font-weight: ${(props) => props.$fontWeight};
+  /* line-height: 1.3; */
+  line-height: ${(props) => props.$lineHeight};
 `;
