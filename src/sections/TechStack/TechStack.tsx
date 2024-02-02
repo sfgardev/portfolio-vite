@@ -26,9 +26,11 @@ export const TechStack = () => {
       <Container>
         <FlexWrapper $direction="column" $gap="2rem" $mb="7rem">
           <SectionTitle $textAlign="center">My Tech Stack</SectionTitle>
-          <SubTitle $textAlign="center">Things I’ve built so far</SubTitle>
+          <SubTitle $textAlign="center">
+            Technologies I’ve been working with recently
+          </SubTitle>
         </FlexWrapper>
-        <FlexWrapper $justify="center" $gap='5.9rem' $wrap="wrap">
+        <FlexWrapper $justify="center" $gap="5.9rem" $wrap="wrap">
           {techIcons.map((icon) => (
             <Icon key={icon} iconId={icon} width="120" height="120" />
           ))}
