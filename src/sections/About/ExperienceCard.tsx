@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/styled/FlexWrapper";
 import { Badge } from "../../components/styled/Badge";
+import { Icon } from "../../components/Icon/Icon";
 
 type ExperienceCardProps = {
   position: string;
@@ -23,13 +24,24 @@ export const ExperienceCard = ({
         <ExperienceCardLeft>
           <ExperienceCardPosition>{position}</ExperienceCardPosition>
           <FlexWrapper $gap="3rem">
-            <ExperienceCardPlace>{place}</ExperienceCardPlace>
-            {city && <ExperienceCardCity>{city}</ExperienceCardCity>}
+            <FlexWrapper $align="center" $gap=".25rem">
+              <Icon iconId="office" width="16" height="12" fill="#a7a7a7" />
+              <ExperienceCardPlace>{place}</ExperienceCardPlace>
+            </FlexWrapper>
+            {city && (
+              <FlexWrapper $align="center" $gap=".125rem">
+                <Icon iconId="location" width="16" height="12" fill="#a7a7a7" />
+                <ExperienceCardCity>{city}</ExperienceCardCity>
+              </FlexWrapper>
+            )}
           </FlexWrapper>
         </ExperienceCardLeft>
         <ExperienceCardRight>
           <Badge>{badgeTitle}</Badge>
-          <ExperienceCardDate>{date}</ExperienceCardDate>
+          <FlexWrapper $align="center" $gap=".125rem">
+            <Icon iconId="calendar" width="16" height="12" fill="#a7a7a7" />
+            <ExperienceCardDate>{date}</ExperienceCardDate>
+          </FlexWrapper>
         </ExperienceCardRight>
       </FlexWrapper>
     </StyledExperienceCard>
