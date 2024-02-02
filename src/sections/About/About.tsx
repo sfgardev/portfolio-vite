@@ -3,6 +3,7 @@ import { Container } from "../../components/styled/Container";
 import { SectionTitle } from "../../components/styled/SectionTitle";
 import { FlexWrapper } from "../../components/styled/FlexWrapper";
 import { ExperienceCard } from "./ExperienceCard";
+import { Icon } from "../../components/Icon/Icon";
 
 const workExperienceItems = [
   {
@@ -51,8 +52,9 @@ export const About = () => {
           </AboutText>
           <AboutExperience>
             <SectionTitle as="h3">Work Experience</SectionTitle>
-            {workExperienceItems.map((item) => (
+            {workExperienceItems.map((item, index) => (
               <ExperienceCard
+                key={index}
                 position={item.position}
                 place={item.place}
                 city={item.city}
@@ -72,6 +74,7 @@ export const About = () => {
           </AboutEducation>
         </FlexWrapper>
       </Container>
+      <Icon iconId="drawing" width="1019" height="1019" />
     </StyledAbout>
   );
 };
