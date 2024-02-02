@@ -12,8 +12,13 @@ export const Header = () => {
         <FlexWrapper>
           <Logo />
           <HeaderWrapper>
-            <Navigation />
-            <SocialIcons />
+            <Navigation
+              $fontSize="1.25rem"
+              $color="#666"
+              $fontWeight="500"
+              $lineHeight="1.3"
+            />
+            <SocialIcons fill="#666" />
           </HeaderWrapper>
         </FlexWrapper>
       </Container>
