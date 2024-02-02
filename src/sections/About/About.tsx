@@ -3,7 +3,7 @@ import { Container } from "../../components/styled/Container";
 import { SectionTitle } from "../../components/styled/SectionTitle";
 import { FlexWrapper } from "../../components/styled/FlexWrapper";
 import { ExperienceCard } from "./ExperienceCard";
-import { Icon } from "../../components/Icon/Icon";
+import { AboutShape } from "./AboutShape";
 
 const workExperienceItems = [
   {
@@ -74,13 +74,17 @@ export const About = () => {
           </AboutEducation>
         </FlexWrapper>
       </Container>
-      <Icon iconId="drawing" width="1019" height="1019" />
+      <AboutShapeWrapper>
+        <AboutShape />
+      </AboutShapeWrapper>
     </StyledAbout>
   );
 };
 
 const StyledAbout = styled.section`
   padding-top: 11.375rem;
+  position: relative;
+  overflow-x: hidden;
 `;
 
 const AboutText = styled.p``;
@@ -92,3 +96,9 @@ const AboutExperience = styled.div`
 `;
 
 const AboutEducation = styled(AboutExperience)``;
+
+const AboutShapeWrapper = styled.div`
+  position: absolute;
+  right: -25%;
+  top: 0;
+`;
