@@ -1,4 +1,5 @@
 import GlobalStyle from "./GlobalStyle";
+import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { About } from "./sections/About/About";
 import { Contact } from "./sections/Contact/Contact";
@@ -17,6 +18,7 @@ function App() {
         <TechStack />
         <Projects />
         <Contact />
+        <Footer />
       </main>
     </>
   );
