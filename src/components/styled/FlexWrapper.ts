@@ -7,6 +7,7 @@ type FlexWrapperProps = {
   $gap?: CSSProperties["gap"];
   $wrap?: CSSProperties["flexWrap"];
   $maxWidth?: CSSProperties["width"];
+  $mb?: CSSProperties["marginBottom"];
 };
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -17,4 +18,5 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   gap: ${(props) => props.$gap};
   flex-wrap: ${(props) => props.$wrap};
   max-width: ${(props) => props.$maxWidth};
+  margin-bottom: ${(props) => props.$mb};
 `;
