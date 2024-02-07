@@ -42,4 +42,12 @@ export const TechStack = () => {
 
 const StyledTechStack = styled.section`
   padding-top: 12.5rem;
+
+  svg {
+    transition: all 0.35s;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
 `;
