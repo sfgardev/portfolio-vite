@@ -32,8 +32,15 @@ const ContactTitle = styled.h2`
 const ContactLink = styled.a.attrs(() => ({
   href: "mailto:hi@pavanmg.in",
 }))`
+  display: inline-block;
   background-image: linear-gradient(to right, #13b0f5, #e70faa);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.35s;
+
+  &:hover {
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+    scale: 1.05;
+  }
 `;
