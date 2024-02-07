@@ -54,4 +54,28 @@ const NavigationLink = styled.a<NavigationProps>`
   font-weight: ${(props) => props.$fontWeight};
   /* line-height: 1.3; */
   line-height: ${(props) => props.$lineHeight};
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to left, #e70faa, #00c0fd);
+    height: 4px;
+    left: -2px;
+    right: -2px;
+    bottom: -4px;
+    scale: 0;
+    transition: all 0.35s;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to right, #13b0f5, #8d6ec1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::before {
+      scale: 1;
+    }
+  }
 `;
