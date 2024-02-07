@@ -4,16 +4,17 @@ import { Icon } from "../Icon/Icon";
 const socialIcons = ["github", "twitter", "linkedin"];
 
 type SocialIconsProps = {
-  fill: string;
+  fill?: string;
+  $hover: string;
 };
 
-export const SocialIcons = ({ fill }: SocialIconsProps) => {
+export const SocialIcons = ({ fill, $hover }: SocialIconsProps) => {
   return (
     <StyledSocialIcons>
       {socialIcons.map((icon) => (
-        <a key={icon} href={`https://${icon}.com`}>
+        <Link key={icon} href={`https://${icon}.com`} $hover={$hover}>
           <Icon width="30px" height="30px" iconId={icon} fill={fill} />
-        </a>
+        </Link>
       ))}
     </StyledSocialIcons>
   );
@@ -22,4 +23,21 @@ export const SocialIcons = ({ fill }: SocialIconsProps) => {
 const StyledSocialIcons = styled.div`
   display: flex;
   gap: 1.25rem;
+`;
+
+const Link = styled.a<SocialIconsProps>`
+  align-self: flex-start;
+  transition: all 0.35s;
+
+  svg {
+    transition: all 0.35s;
+  }
+
+  &:hover {
+    translate: 0 -2px;
+
+    svg {
+      fill: ${(props) => props.$hover};
+    }
+  }
 `;

@@ -18,7 +18,7 @@ export const Header = () => {
               $fontWeight="500"
               $lineHeight="1.3"
             />
-            <SocialIcons fill="#666" />
+            <SocialIcons fill="#666" $hover="#4c4b4b" />
           </HeaderWrapper>
         </FlexWrapper>
       </Container>

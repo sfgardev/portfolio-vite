@@ -15,7 +15,7 @@ export const Footer = () => {
             <FooterLink href="tel:911234509876">+91 12345 09876</FooterLink>
             <FooterLink href="mailto:hi@pavanmg.in">hi@pavanmg.in</FooterLink>
           </FooterLinks>
-          <SocialIcons fill="#42446E" />
+          <SocialIcons fill="#42446E" $hover='#474b97' />
         </FlexWrapper>
         <FooterDivider />
         <FlexWrapper $justify="space-between" $align="center">
