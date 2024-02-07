@@ -10,15 +10,27 @@ export const Footer = () => {
     <StyledFooter>
       <Container>
         <FlexWrapper $align="center" $gap="6rem">
-          <Icon iconId="logo-footer" width="97" height="59" />
+          <FooterLogoLink href="#">
+            <Icon
+              iconId="logo-footer"
+              width="97"
+              height="59"
+              fill="currentColor"
+            />
+          </FooterLogoLink>
           <FooterLinks>
             <FooterLink href="tel:911234509876">+91 12345 09876</FooterLink>
             <FooterLink href="mailto:hi@pavanmg.in">hi@pavanmg.in</FooterLink>
           </FooterLinks>
-          <SocialIcons fill="#42446E" $hover='#474b97' />
+          <SocialIcons fill="#42446E" $hover="#474b97" />
         </FlexWrapper>
         <FooterDivider />
-        <FlexWrapper $justify="space-between" $align="center">
+        <FlexWrapper
+          $justify="space-between"
+          $align="center"
+          $gap={"1rem"}
+          $wrap="wrap"
+        >
           <Navigation
             $fontSize="1.125"
             $color="#42446E"
@@ -39,6 +51,15 @@ const StyledFooter = styled.footer`
   padding: 12.5rem 0 3.75rem;
 `;
 
+const FooterLogoLink = styled.a`
+  color: #42446e;
+  transition: all 0.35s;
+
+  &:hover {
+    color: #474b97;
+  }
+`;
+
 const FooterLinks = styled.div`
   display: flex;
   gap: 3rem;
@@ -48,6 +69,11 @@ const FooterLinks = styled.div`
 const FooterLink = styled.a`
   font-family: "DM Sans", sans-serif;
   color: #42446e;
+  transition: all 0.35s;
+
+  &:hover {
+    color: #474b97;
+  }
 `;
 
 const FooterDivider = styled.div`
