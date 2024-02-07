@@ -10,11 +10,13 @@ type ProjectsCardProps = {
 export const ProjectsCard = ({ jpegUrl, webpUrl }: ProjectsCardProps) => {
   return (
     <StyledProjectsCard>
-      <picture>
-        <source srcSet={webpUrl} type="image/webp" />
-        <source srcSet={jpegUrl} type="image/jpeg" />
-        <ProjectsCardImage src={jpegUrl} alt="Project HTML CSS REACT" />
-      </picture>
+      <ProjectsCardImageWrapper>
+        <picture>
+          <source srcSet={webpUrl} type="image/webp" />
+          <source srcSet={jpegUrl} type="image/jpeg" />
+          <ProjectsCardImage src={jpegUrl} alt="Project HTML CSS REACT" />
+        </picture>
+      </ProjectsCardImageWrapper>
 
       <ProjectsCardContent>
         <ProjectsCardTitle>Project Tile goes here</ProjectsCardTitle>
@@ -28,12 +30,17 @@ export const ProjectsCard = ({ jpegUrl, webpUrl }: ProjectsCardProps) => {
         </ProjectsCardInfo>
         <FlexWrapper $justify="space-between" $align="center">
           <ProjectsCardLink href="https://github.com">
-            <Icon iconId="chain" width="20" height="20" fill="#000" />
+            <Icon iconId="chain" width="20" height="20" fill="currentColor" />
             Live Preview
           </ProjectsCardLink>
 
           <ProjectsCardLink href="https://github.com">
-            <Icon iconId="github-projects" width="20" height="20" fill="#000" />
+            <Icon
+              iconId="github-projects"
+              width="20"
+              height="20"
+              fill="currentColor"
+            />
             View Code
           </ProjectsCardLink>
         </FlexWrapper>
@@ -42,18 +49,31 @@ export const ProjectsCard = ({ jpegUrl, webpUrl }: ProjectsCardProps) => {
   );
 };
 
+const ProjectsCardImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.35s;
+`;
+
 const StyledProjectsCard = styled.article`
   width: 31.4%;
+  flex: 1 1 auto;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+
+  &:hover {
+    ${ProjectsCardImage} {
+      scale: 1.15;
+    }
+  }
 `;
 
-const ProjectsCardImage = styled.img`
-  width: 100%;
+const ProjectsCardImageWrapper = styled.div`
   height: 16.25rem;
-  object-fit: cover;
+  overflow: hidden;
 `;
 
 const ProjectsCardContent = styled.div`
@@ -92,4 +112,9 @@ const ProjectsCardLink = styled.a`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: all 0.35s;
+
+  &:hover {
+    color: #716e6e;
+  }
 `;
