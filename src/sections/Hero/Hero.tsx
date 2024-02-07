@@ -52,4 +52,10 @@ const HeroImage = styled.img`
   height: 21.75rem;
   border-radius: 50%;
   object-fit: cover;
+  transition: all 0.35s;
+
+  &:hover {
+    translate: 0 -15px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+  }
 `;
