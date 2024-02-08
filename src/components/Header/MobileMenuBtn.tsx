@@ -48,7 +48,7 @@ const StyledMobileMenuBtn = styled.button<StyledMobileMenuBtnProps>`
       }
     `}
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 56.25em) {
     display: flex;
   }
 

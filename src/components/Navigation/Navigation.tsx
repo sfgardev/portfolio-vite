@@ -43,7 +43,7 @@ export const Navigation = ({
 };
 
 const StyledNavigation = styled.nav<StyledNavigationProps>`
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 56.25em) {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -71,7 +71,7 @@ const NavigationList = styled.ul`
   display: flex;
   gap: 3.25rem;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 56.25em) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -89,7 +89,7 @@ const NavigationLink = styled.a<NavigationProps>`
   line-height: ${(props) => props.$lineHeight};
   position: relative;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 56.25em) {
     font-size: 2rem;
   }
 
