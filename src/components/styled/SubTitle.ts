@@ -10,4 +10,9 @@ export const SubTitle = styled.h3<SubTitleProps>`
   color: #666666;
   font-weight: 400;
   text-align: ${(props) => props.$textAlign};
+
+  @media screen and (max-width: 43.125em) {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
 `;

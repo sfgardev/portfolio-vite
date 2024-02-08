@@ -16,6 +16,10 @@ export const Contact = () => {
 
 const StyledContact = styled.section`
   padding-top: 11.5rem;
+
+  @media screen and (max-width: 56.25em) {
+    padding-top: 7rem;
+  }
 `;
 
 const ContactTitle = styled.h2`
@@ -27,6 +31,10 @@ const ContactTitle = styled.h2`
   line-height: 1.2;
   text-align: center;
   margin: 0 auto;
+
+  @media screen and (max-width: 28.75em) {
+    font-size: 3rem;
+  }
 `;
 
 const ContactLink = styled.a.attrs(() => ({

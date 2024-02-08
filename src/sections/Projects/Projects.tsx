@@ -69,4 +69,13 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
   padding-top: 12.5rem;
+
+  @media screen and (max-width: 56.25em) {
+    padding-top: 5rem;
+
+    ${Container} ${FlexWrapper}:first-child {
+      margin-bottom: 3rem;
+      gap: 1.25rem;
+    }
+  }
 `;

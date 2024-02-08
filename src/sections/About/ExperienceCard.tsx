@@ -52,6 +52,14 @@ const StyledExperienceCard = styled.article`
   border-bottom: 2px solid #ebeaed;
   padding-bottom: 1.5rem;
 
+  & > ${FlexWrapper} {
+    @media screen and (max-width: 28.75em) {
+      flex-direction: column;
+
+      gap: 0.5rem;
+    }
+  }
+
   span {
     font-weight: 500;
     font-size: 0.75rem;
@@ -67,8 +75,16 @@ const ExperienceCardRight = styled.div`
   flex-direction: column;
   gap: 0.075rem;
 
+  @media screen and (max-width: 28.75em) {
+    flex-direction: row;
+  }
+
   & > div {
     align-self: flex-end;
+
+    @media screen and (max-width: 28.75em) {
+      align-self: start;
+    }
   }
 `;
 

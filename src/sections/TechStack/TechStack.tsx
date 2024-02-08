@@ -43,8 +43,22 @@ export const TechStack = () => {
 const StyledTechStack = styled.section`
   padding-top: 12.5rem;
 
+  @media screen and (max-width: 56.25em) {
+    padding-top: 7rem;
+
+    ${Container} ${FlexWrapper} {
+      margin-bottom: 3rem;
+      gap: 1.25rem;
+    }
+  }
+
   svg {
     transition: all 0.35s;
+
+    @media screen and (max-width: 56.25em) {
+      width: 100px;
+      height: 100px;
+    }
 
     &:hover {
       scale: 1.1;

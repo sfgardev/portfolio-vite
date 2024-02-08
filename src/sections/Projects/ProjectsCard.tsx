@@ -64,6 +64,15 @@ const StyledProjectsCard = styled.article`
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 
+  @media screen and (max-width: 43.125em) {
+    flex: 0 1 80%;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 28.75em) {
+    flex-basis: 100%;
+  }
+
   &:hover {
     ${ProjectsCardImage} {
       scale: 1.15;
@@ -74,6 +83,14 @@ const StyledProjectsCard = styled.article`
 const ProjectsCardImageWrapper = styled.div`
   height: 16.25rem;
   overflow: hidden;
+
+  @media screen and (max-width: 43.125em) {
+    height: 18rem;
+  }
+
+  @media screen and (max-width: 28.75em) {
+    height: 16.25rem;
+  }
 `;
 
 const ProjectsCardContent = styled.div`

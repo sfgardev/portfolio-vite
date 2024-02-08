@@ -85,6 +85,17 @@ const StyledAbout = styled.section`
   padding-top: 11.375rem;
   position: relative;
   overflow-x: hidden;
+
+  @media screen and (max-width: 56.25em) {
+    padding-top: 7rem;
+  }
+
+  ${Container} > ${FlexWrapper} {
+    @media screen and (max-width: 43.125em) {
+      margin: 0 auto;
+      gap: 1.75rem;
+    }
+  }
 `;
 
 const AboutText = styled.p``;
@@ -93,6 +104,10 @@ const AboutExperience = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.375rem;
+
+  @media screen and (max-width: 43.125em) {
+    gap: 1.75rem;
+  }
 `;
 
 const AboutEducation = styled(AboutExperience)``;
@@ -101,4 +116,8 @@ const AboutShapeWrapper = styled.div`
   position: absolute;
   right: -25%;
   top: 0;
+
+  @media screen and (max-width: 56.25em) {
+    display: none;
+  }
 `;

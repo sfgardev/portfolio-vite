@@ -30,12 +30,32 @@ export const Hero = () => {
 
 const StyledHero = styled.section`
   padding-top: 14.94rem;
+
+  @media screen and (max-width: 56.25em) {
+    padding-top: 4rem;
+  }
+
+  ${FlexWrapper} {
+    @media screen and (max-width: 43.125em) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
 `;
 
 const HeroTitile = styled.h1`
   font-size: 3.625rem;
   line-height: 1.2;
   color: #42446e;
+
+  @media screen and (max-width: 56.25em) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 43.125em) {
+    /* font-size: 2rem; */
+    text-align: center;
+  }
 
   span {
     background-image: linear-gradient(to right, #13b0f5, #8d6ec1);

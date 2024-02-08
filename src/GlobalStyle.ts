@@ -14,6 +14,16 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
 
+    html {
+        @media screen and (max-width: 56.25em) {
+            font-size: 87.5%;
+        }
+
+        @media screen and (max-width: 43.125em) {
+            font-size: 75%;
+        }
+    }
+
     body {
         font-family: 'Poppins', sans-serif;
         font-size: 1.125rem;

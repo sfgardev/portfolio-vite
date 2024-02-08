@@ -49,6 +49,20 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   padding: 12.5rem 0 3.75rem;
+
+  @media screen and (max-width: 43.125em) {
+    padding: 7rem 0 2rem;
+
+    ${Container} ${FlexWrapper}:first-child {
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav {
+      display: none;
+    }
+  }
 `;
 
 const FooterLogoLink = styled.a`
@@ -64,6 +78,10 @@ const FooterLinks = styled.div`
   display: flex;
   gap: 3rem;
   margin-left: auto;
+
+  @media screen and (max-width: 43.125em) {
+    margin-left: 0;
+  }
 `;
 
 const FooterLink = styled.a`
