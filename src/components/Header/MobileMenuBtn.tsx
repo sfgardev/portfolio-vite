@@ -22,8 +22,8 @@ export const MobileMenuBtn = ({ isOpen, onToggle }: MobileMenuBtnProps) => {
 const StyledMobileMenuBtn = styled.button<StyledMobileMenuBtnProps>`
   border: none;
   background-color: transparent;
-  width: 2.5rem;
-  height: 2rem;
+  width: 40px;
+  height: 32px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
