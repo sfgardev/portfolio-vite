@@ -49,7 +49,7 @@ const StyledNavigation = styled.nav<StyledNavigationProps>`
     height: 100dvh;
     left: 0;
     top: 0;
-
+    z-index: 90;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.9);
     translate: 100%;
