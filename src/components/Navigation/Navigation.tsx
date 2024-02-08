@@ -1,10 +1,15 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 type NavigationProps = {
   $color: string;
   $fontSize: string;
   $fontWeight: string;
   $lineHeight: string;
+  isOpen?: boolean;
+};
+
+type StyledNavigationProps = {
+  $isOpen?: boolean;
 };
 
 const navLinks = ["Home", "About", "Tech Stack", "Projects", "Contact"];
@@ -14,9 +19,10 @@ export const Navigation = ({
   $fontSize,
   $fontWeight,
   $lineHeight,
+  isOpen,
 }: NavigationProps) => {
   return (
-    <StyledNavigation>
+    <StyledNavigation $isOpen={isOpen}>
       <NavigationList>
         {navLinks.map((link) => (
           <NavigationItem key={link}>
@@ -36,11 +42,41 @@ export const Navigation = ({
   );
 };
 
-const StyledNavigation = styled.nav``;
+const StyledNavigation = styled.nav<StyledNavigationProps>`
+  @media screen and (max-width: 900px) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.9);
+    translate: 100%;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+    visibility: hidden;
+
+    ${(props) =>
+      props.$isOpen &&
+      css`
+        opacity: 1;
+        visibility: visible;
+        translate: 0;
+      `}
+  }
+`;
 
 const NavigationList = styled.ul`
   display: flex;
   gap: 3.25rem;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 `;
 
 const NavigationItem = styled.li``;
@@ -48,13 +84,14 @@ const NavigationItem = styled.li``;
 const NavigationLink = styled.a<NavigationProps>`
   font-family: "DM Sans", sans-serif;
   color: ${(props) => props.$color};
-  /* font-size: 1.25rem; */
   font-size: ${(props) => props.$fontSize};
-  /* font-weight: 500; */
   font-weight: ${(props) => props.$fontWeight};
-  /* line-height: 1.3; */
   line-height: ${(props) => props.$lineHeight};
   position: relative;
+
+  @media screen and (max-width: 900px) {
+    font-size: 2rem;
+  }
 
   &::before {
     content: "";
