@@ -115,7 +115,7 @@ Error generating stack: `+i.message+`
   }
 `,J0=["Home","About","Tech Stack","Projects","Contact"],md=({$color:e,$fontSize:t,$fontWeight:n,$lineHeight:r,isOpen:o})=>a.jsx(q0,{$isOpen:o,children:a.jsx(b0,{children:J0.map(i=>a.jsx(e2,{children:a.jsx(t2,{href:"#",$color:e,$fontSize:t,$fontWeight:n,$lineHeight:r,children:i})},i))})}),q0=L.nav`
   @media screen and (max-width: 56.25em) {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
@@ -285,7 +285,7 @@ Error generating stack: `+i.message+`
       margin: auto;
     }
   }
-`,p2=()=>{const[e,t]=qt.useState(!1),n=()=>{console.log(e),t(r=>!r)};return qt.useEffect(()=>{e?document.body.style.overflowY="hidden":document.body.style.overflowY="auto"},[e]),a.jsx(h2,{children:a.jsx(Ye,{children:a.jsxs(J,{children:[a.jsx(a2,{}),a.jsxs(m2,{children:[a.jsx(md,{$fontSize:"1.25rem",$color:"#666",$fontWeight:"500",$lineHeight:"1.3",isOpen:e}),a.jsx(hd,{$isInHeader:!0,fill:"#666",$hover:"#4c4b4b"}),a.jsx(f2,{isOpen:e,onToggle:n})]})]})})})},h2=L.header`
+`,p2=()=>{const[e,t]=qt.useState(!1),n=()=>{t(r=>!r)};return qt.useEffect(()=>{e?document.body.style.overflowY="hidden":document.body.style.overflowY="visible"},[e]),a.jsx(h2,{children:a.jsx(Ye,{children:a.jsxs(J,{children:[a.jsx(a2,{}),a.jsxs(m2,{children:[a.jsx(md,{$fontSize:"1.25rem",$color:"#666",$fontWeight:"500",$lineHeight:"1.3",isOpen:e}),a.jsx(hd,{$isInHeader:!0,fill:"#666",$hover:"#4c4b4b"}),a.jsx(f2,{isOpen:e,onToggle:n})]})]})})})},h2=L.header`
   padding-top: 2.56rem;
 `,m2=L.div`
   margin-left: auto;
