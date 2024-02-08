@@ -11,7 +11,6 @@ export const Header = () => {
   const [isMobileNavOpened, setIsMobileNavOpened] = useState(false);
 
   const toggle = () => {
-    console.log(isMobileNavOpened);
     setIsMobileNavOpened((s) => !s);
   };
 
@@ -19,7 +18,7 @@ export const Header = () => {
     if (isMobileNavOpened) {
       document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflowY = "auto";
+      document.body.style.overflowY = "visible";
     }
   }, [isMobileNavOpened]);
 
