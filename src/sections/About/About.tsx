@@ -84,7 +84,6 @@ export const About = () => {
 const StyledAbout = styled.section`
   padding-top: 11.375rem;
   position: relative;
-  overflow-x: hidden;
 
   @media screen and (max-width: 56.25em) {
     padding-top: 7rem;
