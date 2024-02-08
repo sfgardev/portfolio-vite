@@ -44,7 +44,7 @@ export const Navigation = ({
 
 const StyledNavigation = styled.nav<StyledNavigationProps>`
   @media screen and (max-width: 56.25em) {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
