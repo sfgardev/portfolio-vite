@@ -18,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
         font-size: 1.125rem;
         color: #666;
-        line-height: 1.44
+        line-height: 1.44;
+        overflow-x: hidden; 
     }
 
     a {
