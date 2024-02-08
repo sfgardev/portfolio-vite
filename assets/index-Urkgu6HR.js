@@ -117,7 +117,7 @@ Error generating stack: `+i.message+`
   @media screen and (max-width: 56.25em) {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100dvh;
     left: 0;
     top: 0;
 
