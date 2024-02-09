@@ -3,7 +3,7 @@ import { Container } from "../../components/styled/Container";
 
 export const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id="Contact">
       <Container>
         <ContactTitle>
           For any questions please mail me:{" "}

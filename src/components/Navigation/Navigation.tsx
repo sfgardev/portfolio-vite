@@ -6,6 +6,7 @@ type NavigationProps = {
   $fontWeight: string;
   $lineHeight: string;
   isOpen?: boolean;
+  onToggle?: () => void;
 };
 
 type StyledNavigationProps = {
@@ -20,6 +21,7 @@ export const Navigation = ({
   $fontWeight,
   $lineHeight,
   isOpen,
+  onToggle,
 }: NavigationProps) => {
   return (
     <StyledNavigation $isOpen={isOpen}>
@@ -27,11 +29,12 @@ export const Navigation = ({
         {navLinks.map((link) => (
           <NavigationItem key={link}>
             <NavigationLink
-              href="#"
+              href={`#${link}`}
               $color={$color}
               $fontSize={$fontSize}
               $fontWeight={$fontWeight}
               $lineHeight={$lineHeight}
+              onClick={onToggle}
             >
               {link}
             </NavigationLink>

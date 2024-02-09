@@ -22,7 +22,7 @@ const techIcons = [
 
 export const TechStack = () => {
   return (
-    <StyledTechStack>
+    <StyledTechStack id="Tech Stack">
       <Container>
         <FlexWrapper $direction="column" $gap="2rem" $mb="7rem">
           <SectionTitle $textAlign="center">My Tech Stack</SectionTitle>
@@ -42,9 +42,11 @@ export const TechStack = () => {
 
 const StyledTechStack = styled.section`
   padding-top: 12.5rem;
+  scroll-margin-top: -12rem;
 
   @media screen and (max-width: 56.25em) {
     padding-top: 7rem;
+    scroll-margin-top: -6rem;
 
     ${Container} ${FlexWrapper} {
       margin-bottom: 3rem;

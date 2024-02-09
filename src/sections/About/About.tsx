@@ -40,7 +40,7 @@ const educationExperienceItem = {
 
 export const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="About">
       <Container>
         <FlexWrapper $direction="column" $gap="2.375rem" $maxWidth="44.375rem">
           <SectionTitle>About Me</SectionTitle>
@@ -84,9 +84,11 @@ export const About = () => {
 const StyledAbout = styled.section`
   padding-top: 11.375rem;
   position: relative;
+  scroll-margin-top: -11rem;
 
   @media screen and (max-width: 56.25em) {
     padding-top: 7rem;
+    scroll-margin-top: -6rem;
   }
 
   ${Container} > ${FlexWrapper} {

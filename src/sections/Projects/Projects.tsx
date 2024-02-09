@@ -47,7 +47,7 @@ const projectItems = [
 
 export const Projects = () => {
   return (
-    <StyledProjects>
+    <StyledProjects id="Projects">
       <Container>
         <FlexWrapper $direction="column" $gap="2rem" $mb="7rem">
           <SectionTitle $textAlign="center">Projects</SectionTitle>
@@ -69,9 +69,11 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
   padding-top: 12.5rem;
+  scroll-margin-top: -12rem;
 
   @media screen and (max-width: 56.25em) {
     padding-top: 5rem;
+    scroll-margin-top: -4rem;
 
     ${Container} ${FlexWrapper}:first-child {
       margin-bottom: 3rem;

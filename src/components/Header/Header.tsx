@@ -6,24 +6,29 @@ import { Container } from "../styled/Container";
 import { FlexWrapper } from "../styled/FlexWrapper";
 import { MobileMenuBtn } from "./MobileMenuBtn";
 import { useEffect, useState } from "react";
+import { useWindowWidth } from "../../hooks/useWindowWidth";
 
 export const Header = () => {
   const [isMobileNavOpened, setIsMobileNavOpened] = useState(false);
+  const width = useWindowWidth();
+  const isMobile = width <= 900;
 
   const toggle = () => {
-    setIsMobileNavOpened((s) => !s);
+    setIsMobileNavOpened((opened) => !opened);
   };
 
   useEffect(() => {
+    if (!isMobile) return;
+
     if (isMobileNavOpened) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = "visible";
     }
-  }, [isMobileNavOpened]);
+  }, [isMobileNavOpened, isMobile]);
 
   return (
-    <StyledHeader>
+    <StyledHeader id="Home">
       <Container>
         <FlexWrapper>
           <Logo />
@@ -34,8 +39,9 @@ export const Header = () => {
               $fontWeight="500"
               $lineHeight="1.3"
               isOpen={isMobileNavOpened}
+              onToggle={toggle}
             />
-            <SocialIcons $isInHeader fill="#666" $hover="#4c4b4b" />
+            {!isMobile && <SocialIcons fill="#666" $hover="#4c4b4b" />}
             <MobileMenuBtn isOpen={isMobileNavOpened} onToggle={toggle} />
           </HeaderWrapper>
         </FlexWrapper>
@@ -46,6 +52,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   padding-top: 2.56rem;
+  position: relative;
 `;
 
 const HeaderWrapper = styled.div`
@@ -53,4 +60,8 @@ const HeaderWrapper = styled.div`
   display: flex;
   gap: 3.19rem;
   padding-top: 0.5rem;
+
+  @media screen and (max-width: 56.25em) {
+    padding-top: 0;
+  }
 `;
