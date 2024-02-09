@@ -6,16 +6,11 @@ const socialIcons = ["github", "twitter", "linkedin"];
 type SocialIconsProps = {
   fill?: string;
   $hover?: string;
-  $isInHeader?: boolean;
 };
 
-export const SocialIcons = ({
-  fill,
-  $hover,
-  $isInHeader,
-}: SocialIconsProps) => {
+export const SocialIcons = ({ fill, $hover }: SocialIconsProps) => {
   return (
-    <StyledSocialIcons $isInHeader={$isInHeader}>
+    <StyledSocialIcons>
       {socialIcons.map((icon) => (
         <Link key={icon} href={`https://${icon}.com`} $hover={$hover}>
           <Icon width="30px" height="30px" iconId={icon} fill={fill} />
@@ -28,10 +23,6 @@ export const SocialIcons = ({
 const StyledSocialIcons = styled.div<SocialIconsProps>`
   display: flex;
   gap: 1.25rem;
-
-  @media screen and (max-width: 56.25em) {
-    display: ${(props) => (props.$isInHeader ? "none" : "flex")};
-  }
 `;
 
 const Link = styled.a<SocialIconsProps>`
